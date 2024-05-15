@@ -1,7 +1,11 @@
-function counter(from: number, to: number, step: number): void {
-  for (let i = from; i <= to; i += step) {
-    console.log(i);
-  }
-}
+export function getAvg(scores: any[]): void {
+  let sum = 0;
 
-export default counter;
+  for (let i = 0; i <= scores.length; i += 1) {
+    sum += scores[i] as number;
+  }
+
+  var avg = sum / scores.length;
+
+  return avg;
+}
